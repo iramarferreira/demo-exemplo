@@ -11,9 +11,7 @@ RUN ./gradlew build
 # EXPOSE $PORT
 
 WORKDIR /build/libs
-ENTRYPOINT ["ls"]
-RUN "ls"
-CMD ["ls"]
+
 
 # set up non-root user (recommended for Heroku)
 RUN adduser -D myuser
