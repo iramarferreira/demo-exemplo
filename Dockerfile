@@ -1,8 +1,7 @@
 FROM postgres
 
 ## Configurando o banco de dados
-RUN --name some-postgres \
-    -e POSTGRES_DB=$POSTGRES_DB \
+RUN -e POSTGRES_DB=$POSTGRES_DB \
     -e POSTGRES_USER=$POSTGRES_USER \
     -e POSTGRES_PASSWORD=$POSTGRES_PASSWORD \
     -d postgres
