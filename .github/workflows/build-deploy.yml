@@ -17,13 +17,13 @@ jobs:
           distribution: 'adopt'
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-#      - name: Configurando o banco de dados
-#        uses: harmon758/postgresql-action@v1
-#        with:
-#          postgresql version: '11'  # See https://hub.docker.com/_/postgres for available versions
-#          postgresql db: 'crudCliente'
-#          postgresql user: 'postgres'
-#          postgresql password: 'root'
+      - name: Configurando o banco de dados
+        uses: harmon758/postgresql-action@v1
+        with:
+          postgresql version: '11'  # See https://hub.docker.com/_/postgres for available versions
+          postgresql db: 'crudCliente'
+          postgresql user: 'postgres'
+          postgresql password: 'root'
       - name: Permissão para executar o gradlew
         run: chmod +x ./gradlew
       - name: Build with Gradle
