@@ -1,12 +1,12 @@
 FROM openjdk:8-alpine
 # adicionando usuário para poder executar
 
-# Configurando o banco de dados
-RUN --name some-postgres \
-    -e POSTGRES_DB=$POSTGRES_DB \
-    -e POSTGRES_USER=$POSTGRES_USER \
-    -e POSTGRES_PASSWORD=$POSTGRES_PASSWORD \
-    -d postgres
+## Configurando o banco de dados
+#RUN --name some-postgres \
+#    -e POSTGRES_DB=$POSTGRES_DB \
+#    -e POSTGRES_USER=$POSTGRES_USER \
+#    -e POSTGRES_PASSWORD=$POSTGRES_PASSWORD \
+#    -d postgres
 
 
 #COPY ./build/libs/*.jar /
