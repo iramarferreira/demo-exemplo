@@ -21,4 +21,10 @@ USER myuser
 
 #ENTRYPOINT ["java", "-Dspring.profiles.active=dev", "-jar","Exemplo-0.0.1-SNAPSHOT.jar" ]
 #CMD java $JAVA_OPTS -Dserver.port=$PORT -Dspring.profiles.active=production -jar Exemplo-0.0.1-SNAPSHOT.jar
-CMD ["java","-Dspring.profiles.active=production","-jar", "demo-0.0.1-SNAPSHOT.jar" ]
+#CMD ["java","-Dspring.profiles.active=production","-jar", "demo-0.0.1-SNAPSHOT.jar" ]
+
+CMD ["java","-Dspring.profiles.active=production",
+"-Dspring.datasource.url=${HEROKU_POSTGRESQL_PURPLE_URL}",
+"-Dspring.datasource.username=${DB_USER}",
+"-Dspring.datasource.password=${DB_PASS}",
+"-jar", "demo-0.0.1-SNAPSHOT.jar" ]
