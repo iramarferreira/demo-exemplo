@@ -5,7 +5,7 @@ FROM openjdk:8-alpine
 # Copiando os arquivos
 COPY . .
 # Gerar o build
-RUN ./gradlew build
+RUN ./gradlew clean build
 
 # Não funciona do heroku
 # EXPOSE $PORT
