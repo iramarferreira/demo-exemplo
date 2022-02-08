@@ -24,4 +24,4 @@ USER myuser
 #CMD ["java","-Dspring.profiles.active=production","-jar", "demo-0.0.1-SNAPSHOT.jar" ]
 
 # CMD ["java","-Dspring.profiles.active=production","-jar", "demo-0.0.1-SNAPSHOT.jar" ]
-CMD ["java","-Dspring.profiles.active=production","-Dspring.datasource.url=jdbc:postgresql:${DB_HOSTNAME}:${DB_PORT}/${DB_DATABASE}", "-Dspring.datasource.username=${DB_USER}","-Dspring.datasource.password=${DB_PASS}" ,"-jar", "demo-0.0.1-SNAPSHOT.jar" ]
+CMD ["java","-Dspring.profiles.active=production","-Dspring.datasource.url=${JDBC_DATABASE_URL}", "-Dspring.datasource.username=${DB_USER}","-Dspring.datasource.password=${DB_PASS}" ,"-jar", "demo-0.0.1-SNAPSHOT.jar" ]
