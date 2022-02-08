@@ -24,3 +24,4 @@ USER myuser
 #CMD ["java","-Dspring.profiles.active=production","-jar", "demo-0.0.1-SNAPSHOT.jar" ]
 
 # CMD ["java","-Dspring.profiles.active=production","-jar", "demo-0.0.1-SNAPSHOT.jar" ]
+CMD ["java","-Dspring.profiles.active=production","-Dspring.datasource.url=${HEROKU_POSTGRESQL_PURPLE_URL}", "-Dspring.datasource.username=${DB_USER}","-Dspring.datasource.password=${DB_PASS}" ,"-jar", "demo-0.0.1-SNAPSHOT.jar" ]
