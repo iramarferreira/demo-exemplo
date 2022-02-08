@@ -39,12 +39,5 @@ jobs:
           heroku_app_name: "demo-dsc" #Must be unique in Heroku
           heroku_email: "iramarbsi@gmail.com"
           usedocker: "true"
-          docker_build_args: |
-            POSTGRES_DB
-            POSTGRES_USER
-            POSTGRES_PASSWORD
-        env:
-          POSTGRES_DB: ${{secrets.POSTGRES_DB}}
-          POSTGRES_USER: ${{secrets.POSTGRES_USER}}
-          POSTGRES_PASSWORD: ${{secrets.POSTGRES_PASSWORD}}
+
 
