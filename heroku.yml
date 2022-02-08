@@ -3,7 +3,12 @@ setup:
     - plan: heroku-postgresql
       as: DATABASE
   config:
-    S3_BUCKET: my-example-bucket
+    DB_DATABASE: ${{DB_DATABASE}}
+    DB_HOSTNAME: ${{DB_HOSTNAME}}
+    DB_PASS: ${{DB_PASS}}
+    DB_PORT: ${{DB_PORT}}
+    DB_USER: ${{DB_USER}}
+
 build:
   docker:
     web: Dockerfile
