@@ -1,11 +1,20 @@
 FROM openjdk:8-alpine
+#MAINTAINER Iramar Ferreira "iramar.ferreira@ifrn.edu.br"
+#VOLUME /temp
+#EXPOSE 8080
+#ENV JAVA_OPTS=""
+#RUN adduser -D springboot
+#ADD --chown=springboot build/libs/*.jar /home/springboot/app.jar
+#ENTRYPOINT exec java $JAVA_OPTS -jar /home/springboot/app.jar
+##ENTRYPOINT ["java", "-Dspring.profiles.active=dev", "-jar","Exemplo-0.0.1-SNAPSHOT.jar" ]
+#
 # adicionando usuário para poder executar
 
 #COPY ./build/libs/*.jar /
 # Copiando os arquivos
 COPY . .
 # Gerar o build
-RUN ./gradlew clean build
+#RUN ./gradlew clean build
 
 # Não funciona do heroku
 # EXPOSE $PORT

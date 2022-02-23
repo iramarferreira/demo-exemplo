@@ -23,6 +23,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @Log4j2
 @Controller
 @ResponseBody
+@CrossOrigin(origins = "*") // Requisições de qualquer origem
 //@RestController
 @RequestMapping(path = "/api")
 public class ClienteController {
